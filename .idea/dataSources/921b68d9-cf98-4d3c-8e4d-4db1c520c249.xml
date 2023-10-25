@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="miBD@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.31</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="Acceso23"/>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="miBD">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="4" name="departamentos">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="9" parent="4" name="empleados">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="10" parent="8" name="dept_no">
+      <DasType>tinyint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="11" parent="8" name="dnombre">
+      <DasType>varchar(15)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="12" parent="8" name="loc">
+      <DasType>varchar(15)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <index id="13" parent="8" name="PRIMARY">
+      <ColNames>dept_no</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="14" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="15" parent="9" name="emp_no">
+      <DasType>smallint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="16" parent="9" name="apellido">
+      <DasType>varchar(10)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="17" parent="9" name="oficio">
+      <DasType>varchar(10)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="18" parent="9" name="dir">
+      <DasType>smallint|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="19" parent="9" name="fecha_alt">
+      <DasType>date|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="20" parent="9" name="salario">
+      <DasType>float(6,2 digit)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="21" parent="9" name="comision">
+      <DasType>float(6,2 digit)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="22" parent="9" name="dept_no">
+      <DasType>tinyint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="23" parent="9" name="FK_DEP">
+      <ColNames>dept_no</ColNames>
+      <RefColNames>dept_no</RefColNames>
+      <RefTableName>departamentos</RefTableName>
+    </foreign-key>
+    <index id="24" parent="9" name="PRIMARY">
+      <ColNames>emp_no</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="25" parent="9" name="FK_DEP">
+      <ColNames>dept_no</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="26" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
