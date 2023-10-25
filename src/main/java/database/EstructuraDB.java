@@ -64,7 +64,7 @@ public class EstructuraDB {
                     " dept_no   TINYINT(2) NOT NULL,\n" +
                     " CONSTRAINT FK_DEP FOREIGN KEY (dept_no ) REFERENCES departamentos(dept_no)\n" +
                     ")";
-            List<String> addEmps = Arrays.asList("INSERT INTO empleados VALUES (7369,'S NCHEZ','EMPLEADO',7902,'1990/12/17',1040,NULL,60)" ,
+            List<String> addEmps = Arrays.asList("INSERT INTO empleados VALUES (7369,'S NCHEZ','EMPLEADO',7902,'1990/12/17',1040,NULL,20)" ,
                     "INSERT INTO empleados VALUES (7499,'ARROYO','VENDEDOR',7698,'1990/02/20',1500,390,30)" ,
                     "INSERT INTO empleados VALUES (7521,'SALA','VENDEDOR',7698,'1991/02/22',1625,650,30)" ,
                     "INSERT INTO empleados VALUES (7566,'JIM NEZ','DIRECTOR',7839,'1991/04/02',2900,NULL,20)" ,

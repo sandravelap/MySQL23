@@ -22,7 +22,7 @@ public class Main {
                     EstructuraDB.crearTablaDeps();
                     EstructuraDB.crearTablaEmps();}
                 case "3" -> database.insNuevoDep.insertarDep();
-                //case "4" -> CargarJson.cargarEmpsJson(deps);
+                case "4" -> database.InsNuevoEmpleado.insertarEmpleado();
                 //case "5" ->
                 default -> System.out.println("Opción incorrecta");
             }
