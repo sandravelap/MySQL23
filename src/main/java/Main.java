@@ -1,4 +1,5 @@
 import database.EstructuraDB;
+import org.w3c.dom.CDATASection;
 
 import static libs.Leer.pedirCadena;
 
@@ -12,7 +13,7 @@ public class Main {
                     "2. Crear tablas y cargar datos de inicio \n"+
                     "3. Insertar nuevo departamento \n"+
                     "4. Insertar nuevo empleado \n"+
-                    "5. cxxx");
+                    "5. Leer empleados de un departamento");
 
             opcion = pedirCadena("Introduce una opción");
             switch (opcion) {
@@ -23,7 +24,7 @@ public class Main {
                     EstructuraDB.crearTablaEmps();}
                 case "3" -> database.insNuevoDep.insertarDep();
                 case "4" -> database.InsNuevoEmpleado.insertarEmpleado();
-                //case "5" ->
+                case "5" -> database.LeerEmpleado.empleadosDepartamento();
                 default -> System.out.println("Opción incorrecta");
             }
         } while (!salir);
